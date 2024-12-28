@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Background and Foreground Colors */
+  --background: 210 10% 97%; /* Light background */
+  --foreground: 300 10% 20%; /* Darker foreground for text */
+  
+  /* Primary Color */
+  --primary: 234 87% 67%; /* Muted Lavender #5D576B */
+  --primary-foreground: 0 0% 100%; /* White for text on primary color */
+  
+  /* Secondary Color */
+  --secondary: 232 70% 60%; /* Light Blue #8884FF */
+  --secondary-foreground: 0 0% 100%; /* White for secondary color text */
+  
+  /* Card Colors */
+  --card: 0 0% 100%; /* White card background */
+  --card-foreground: 300 10% 20%; /* Dark foreground for card text */
+  
+  /* Popover Colors */
+  --popover: 0 0% 100%; /* White popover background */
+  --popover-foreground: 300 10% 20%; /* Dark popover text */
+  
+  /* Accent Color */
+  --accent: 340 30% 70%; /* Soft Pink #E8CEE4 */
+  --accent-foreground: 0 0% 100%; /* White for accent text */
+  
+  /* Muted Light Gray */
+  --muted: 0 0% 92%; /* Light gray */
+  --muted-foreground: 234 50% 30%; /* Muted foreground */
+  
+  /* Destructive Colors */
+  --destructive: 0 84% 60%; /* Red for destructive actions */
+  --destructive-foreground: 0 0% 98%; /* White for destructive text */
+  
+  /* Border & Input */
+  --border: 234 87% 67%; /* Muted lavender border */
+  --input: 234 87% 67%; /* Input field border */
+  --ring: 234 87% 67%; /* Focus ring color */
+  
+  /* Chart Colors */
+  --chart-1: 234 87% 67%; /* Primary chart color */
+  --chart-2: 232 70% 60%; /* Secondary chart color */
+  --chart-3: 340 30% 70%; /* Accent chart color */
+  --chart-4: 0 0% 92%; /* Neutral chart color */
+  --chart-5: 300 10% 20%; /* Dark text chart color */
+  
+  --radius: 0.5rem; /* Border radius */
+}
+
+.dark {
+  --background: 300 10% 10%; /* Dark background */
+  --foreground: 0 0% 92%; /* Light foreground text */
+  
+  /* Primary Color */
+  --primary: 234 87% 67%; /* Muted Lavender */
+  --primary-foreground: 0 0% 100%; /* White text on primary */
+  
+  /* Secondary Color */
+  --secondary: 232 70% 60%; /* Light Blue */
+  --secondary-foreground: 0 0% 100%; /* White text on secondary */
+  
+  /* Card Colors */
+  --card: 340 20% 10%; /* Dark accent card background */
+  --card-foreground: 0 0% 92%; /* Light card text */
+  
+  /* Popover Colors */
+  --popover: 340 20% 10%; /* Dark accent popover background */
+  --popover-foreground: 0 0% 92%; /* Light popover text */
+  
+  /* Accent Color */
+  --accent: 340 30% 70%; /* Soft Pink */
+  --accent-foreground: 0 0% 100%; /* White text on accent */
+  
+  /* Muted Dark Colors */
+  --muted: 340 30% 10%; /* Dark muted colors */
+  --muted-foreground: 0 0% 92%; /* Light muted foreground text */
+  
+  /* Destructive Colors */
+  --destructive: 0 62% 30%; /* Dark red destructive actions */
+  --destructive-foreground: 0 0% 98%; /* White for destructive text */
+  
+  /* Border & Input */
+  --border: 234 87% 67%; /* Muted lavender border */
+  --input: 234 87% 67%; /* Input field border */
+  --ring: 234 87% 67%; /* Focus ring color */
+  
+  /* Chart Colors */
+  --chart-1: 234 87% 67%; /* Primary chart color */
+  --chart-2: 232 70% 60%; /* Secondary chart color */
+  --chart-3: 340 30% 70%; /* Accent chart color */
+  --chart-4: 0 0% 92%; /* Neutral chart color */
+  --chart-5: 300 10% 20%; /* Dark text chart color */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom Gradient Backgrounds */
+.hero-gradient {
+  background: linear-gradient(135deg, #5D576B 0%, #8884FF 100%);
+}
+
+.card-hover-gradient {
+  background: linear-gradient(135deg, #5D576B 0%, #D7BCE8 100%);
+}
+
+/* Custom Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Enhanced Focus Styles */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary) / 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.7);
+}
