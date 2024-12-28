@@ -61,13 +61,13 @@ export function Footer() {
               <h4 className="font-semibold">Contact</h4>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="mailto:contact@beatrix.dev" className="text-muted-foreground hover:text-foreground">
-                    contact@beatrix.dev
+                  <a href="mailto:hassan@beatrixsolutions.com" className="text-muted-foreground hover:text-foreground">
+                    hassan@beatrixsolutions.com
                   </a>
                 </li>
                 <li>
                   <a href="tel:+1234567890" className="text-muted-foreground hover:text-foreground">
-                    (123) 456-7890
+                    +96178877188
                   </a>
                 </li>
                 <li>
